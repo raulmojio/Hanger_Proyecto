@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".add"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iconoapp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="100dp"
+        android:src="@drawable/hanger"></ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/iconoapp"
+        android:text="SUBIR"
+        android:textColor="@color/rosapp"
+        android:textSize="30dp"
+        android:textStyle="bold"></TextView>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Add_Layout_Titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Título"
+        android:layout_marginTop="90dp"
+        android:layout_above="@+id/Add_Layout_Descripcion"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:inputType="textPersonName"
+        android:textSize="18sp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:endIconMode="clear_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Add_EditText_Titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enlaces"
+        android:layout_marginTop="20dp"
+        android:layout_above="@+id/Add_ImageView_Imagen"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:endIconMode="clear_text"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:id="@+id/Add_Layout_Descripcion"
+        android:inputType="textMultiLine"
+        android:textSize="18sp" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/AddEditTextDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <ImageView
+        android:id="@+id/Add_ImageView_Imagen"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_above="@id/Add_Button_Subir"
+
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/subirimagen" />
+
+    <Button
+        android:id="@+id/Add_Button_Subir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="100dp"
+        android:layout_above="@+id/ActivityMain_Button_Navegación"
+
+
+        android:text="SUBIR"
+        android:textSize="18sp" />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/ActivityMain_Button_Navegación"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/rosapp"
+        app:itemIconTint="@color/gris"
+        app:itemTextColor="@color/gris"
+        app:menu="@menu/menu_navigation" />
+
+
+
+
+
+
+</RelativeLayout>

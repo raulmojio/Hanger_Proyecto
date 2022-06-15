@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/raulm/AndroidStudioProjects/Cook App/app/src/main/res/drawable/ic_baseline_error_24.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/raulm/AndroidStudioProjects/Cook App/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/raulm/AndroidStudioProjects/Cook App/app/src/main/res/drawable/ic_fav.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/raulm/AndroidStudioProjects/Cook App/app/src/main/res/drawable/ic_perfil.xml" value="0.21822916666666667" />
+        <entry key="..\:/Users/raulm/AndroidStudioProjects/Cook App/app/src/main/res/drawable/iconoapp_background.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/raulm/AndroidStudioProjects/Cook App/app/src/main/res/drawable/splash_screen.xml" value="0.22604166666666667" />
+        <entry key="..\:/Users/raulm/AndroidStudioProjects/Cook App/app/src/main/res/layout/activity_add.xml" value="0.25" />
+        <entry key="..\:/Users/raulm/AndroidStudioProjects/Cook App/app/src/main/res/layout/activity_ampliado.xml" value="0.25" />
+        <entry key="..\:/Users/raulm/AndroidStudioProjects/Cook App/app/src/main/res/layout/activity_buscador.xml" value="0.265625" />
+        <entry key="..\:/Users/raulm/AndroidStudioProjects/Cook App/app/src/main/res/layout/activity_cambio_password.xml" value="0.3375" />
+        <entry key="..\:/Users/raulm/AndroidStudioProjects/Cook App/app/src/main/res/layout/activity_detail.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/raulm/AndroidStudioProjects/Cook App/app/src/main/res/layout/activity_foro.xml" value="0.25" />
+        <entry key="..\:/Users/raulm/AndroidStudioProjects/Cook App/app/src/main/res/layout/activity_imagen_perfil.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/raulm/AndroidStudioProjects/Cook App/app/src/main/res/layout/activity_like.xml" value="0.1672473867595819" />
+        <entry key="..\:/Users/raulm/AndroidStudioProjects/Cook App/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/Users/raulm/AndroidStudioProjects/Cook App/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/raulm/AndroidStudioProjects/Cook App/app/src/main/res/layout/activity_perfil.xml" value="0.33" />
+        <entry key="..\:/Users/raulm/AndroidStudioProjects/Cook App/app/src/main/res/layout/activity_receta_ampliada.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/raulm/AndroidStudioProjects/Cook App/app/src/main/res/layout/activity_registro.xml" value="0.33" />
+        <entry key="..\:/Users/raulm/AndroidStudioProjects/Cook App/app/src/main/res/layout/item_list_view.xml" value="0.1921875" />
+        <entry key="..\:/Users/raulm/AndroidStudioProjects/Cook App/app/src/main/res/layout/list_item_foro.xml" value="0.5" />
+        <entry key="..\:/Users/raulm/AndroidStudioProjects/Cook App/app/src/main/res/layout/main_activity_item_list.xml" value="0.18" />
+        <entry key="..\:/Users/raulm/AndroidStudioProjects/Cook App/app/src/main/res/layout/movie_item_list.xml" value="0.1641337386018237" />
+        <entry key="..\:/Users/raulm/AndroidStudioProjects/Cook App/app/src/main/res/menu/menu_navigation.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/raulm/AndroidStudioProjects/Cook App/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/raulm/AndroidStudioProjects/Cook App/app/src/main/res/mipmap-anydpi-v26/iconoapp.xml" value="0.22135416666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

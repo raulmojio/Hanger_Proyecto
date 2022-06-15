@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ForoActivity"
+    android:background="@color/white"
+    android:weightSum="100">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="29">
+
+  <ImageView
+        android:id="@+id/iconoapp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="100dp"
+        android:src="@drawable/hanger"></ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/iconoapp"
+        android:text="FORO"
+        android:textColor="@color/rosapp"
+        android:textSize="30dp"
+        android:textStyle="bold"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="13">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/foro_recyclerview_lista"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_below="@+id/titulo"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_weight="28">
+
+        <EditText
+            android:layout_marginTop="13dp"
+            android:id="@+id/Editextforo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:hint="Escribe para el foro"></EditText>
+
+        <Button
+            android:id="@+id/subirforo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:text="SUBIR"
+            android:layout_marginBottom="10dp"></Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="30">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_marginTop="10dp"
+            android:background="@color/rosapp"
+            android:id="@+id/foro_Activity_Button_Navegacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:itemBackground="@color/rosapp"
+            app:itemIconTint="@color/gris"
+            app:itemTextColor="@color/gris"
+            app:menu="@menu/menu_navigation"
+            android:layout_alignParentBottom="true"/>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

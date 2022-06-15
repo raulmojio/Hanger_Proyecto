@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu"
+        android:title="MENÚ"
+        android:icon="@drawable/ic_menu"/>
+
+    <item
+        android:id="@+id/buscador"
+        android:title="BUSCAR"
+        android:icon="@drawable/ic_buscar"/>
+
+    <item
+        android:id="@+id/foro"
+        android:title="FORO"
+        android:icon="@drawable/ic_foro"/>
+
+    <item
+        android:id="@+id/perfil"
+        android:title="PERFIL"
+        android:icon="@drawable/ic_perfil"/>
+
+</menu>

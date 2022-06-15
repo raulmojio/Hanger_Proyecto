@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="700dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/Main_Activity_Profile_Pic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/defaultprofile"
+            app:civ_border_color="@color/rosapp"
+            app:civ_border_width="2dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp">
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:id="@+id/Main_Activity_Usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="21dp"
+        android:layout_toRightOf="@id/Main_Activity_Profile_Pic"
+        android:text="Usuario"
+        android:textSize="20dp"
+        android:textStyle="bold"></TextView>
+
+    <ImageView
+        android:id="@+id/Main_Activity_Imagen"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_below="@id/Main_Activity_Profile_Pic"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash"></ImageView>
+
+    <TextView
+        android:id="@+id/Main_Activity_Titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Main_Activity_Imagen"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="23dp"
+        android:text="Titulo"
+        android:textSize="20dp"></TextView>
+
+
+    <com.like.LikeButton
+        android:id="@+id/btnFavoritos_MA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="250dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="0dp"
+        android:layout_below="@id/Main_Activity_Imagen"
+        android:layout_toRightOf="@id/Main_Activity_Titulo"
+        android:clickable="true"
+        app:anim_scale_factor="2"
+        app:circle_end_color="@color/rosapp"
+        app:circle_start_color="@color/rosapp"
+        app:icon_size="40dp"
+        app:icon_type="heart"
+        app:like_drawable="@drawable/ic_fav_liked"
+        app:unlike_drawable="@drawable/ic_fav" />
+
+    <TextView
+        android:id="@+id/ActivityMain_Likes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Main_Activity_Imagen"
+        android:textSize="20dp"
+        android:layout_marginTop="23dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp">
+    </TextView>
+
+
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/ActivityMain_ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Main_Activity_Imagen"
+        android:textSize="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp">
+    </TextView>
+
+
+
+
+
+
+</RelativeLayout>

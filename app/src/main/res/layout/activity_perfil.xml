@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PerfilActivity"
+    android:background="@color/white">
+
+
+    <ImageView
+        android:id="@+id/iconoapp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="100dp"
+        android:src="@drawable/hanger"></ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/iconoapp"
+        android:text="PERFIL"
+        android:textColor="@color/rosapp"
+        android:textSize="30dp"
+        android:textStyle="bold"></TextView>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imagenperfil"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_above="@id/PerfilActivity_TextView_Usuario"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/defaultprofile"
+        app:civ_border_color="@color/rosapp"
+        app:civ_border_width="2dp"></de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:id="@+id/PerfilActivity_TextView_Usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="120dp"
+        android:textSize="20dp"
+        android:layout_above="@+id/PerfilActivity_TV_Cambiarimagen"
+        android:text="Usuario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imagenperfil"
+       ></TextView>
+
+
+
+    <TextView
+        android:layout_above="@+id/PerfilActivity_TV_Deslog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/PerfilActivity_TV_Cambiarimagen"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="130dp"
+        android:layout_alignParentBottom="true"
+        android:text="Cambiar imagen de perfil"></TextView>
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/PerfilActivity_TV_Deslog"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="105dp"
+        android:layout_alignParentBottom="true"
+        android:text="Cerrar sesión"></TextView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/Perfil_Activity_Button_Navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:itemBackground="@color/rosapp"
+        app:itemIconTint="@color/gris"
+        app:itemTextColor="@color/gris"
+        app:menu="@menu/menu_navigation" />
+
+
+</RelativeLayout>
