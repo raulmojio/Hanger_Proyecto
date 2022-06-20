@@ -12,18 +12,12 @@
         android:id="@+id/iconoapp"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginLeft="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
         android:src="@drawable/hanger"></ImageView>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_toRightOf="@id/iconoapp"
-        android:text="PERFIL"
-        android:textColor="@color/rosapp"
-        android:textSize="30dp"
-        android:textStyle="bold"></TextView>
+
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imagenperfil"

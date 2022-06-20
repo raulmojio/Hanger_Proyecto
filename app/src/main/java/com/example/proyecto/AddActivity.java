@@ -65,7 +65,6 @@ public class AddActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
 
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
 
@@ -95,13 +94,13 @@ public class AddActivity extends AppCompatActivity {
                 String desc = binding.AddEditTextDescripcion.getText().toString();
                 String imagen = binding.AddImageViewImagen.toString();
 
-
                 if (!tit.isEmpty() && !desc.isEmpty() && !imagen.isEmpty()) {
 
                     DocumentReference dr = firestore.collection("Publicacion").document();
                     dr2 = firestore.collection("Users").document(id);
                     String titulo = binding.AddEditTextTitulo.getText().toString();
                     String descripcion = binding.AddEditTextDescripcion.getText().toString();
+
                     dr2.addSnapshotListener(new EventListener<DocumentSnapshot>() {
                         @Override
                         public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
@@ -113,7 +112,7 @@ public class AddActivity extends AppCompatActivity {
                                     Bitmap bimagen = MediaStore.Images.Media.getBitmap(getApplicationContext().getContentResolver(), selectedImageUri);
                                     String b64imag = bitmapToBase64(bimagen);
                                     String idpublicacion = dr.getId();
-                                    String likes = "0";
+
                                     Map<String, Object> map = new HashMap<>();
                                     map.put("titulo", titulo);
                                     map.put("descripcion", descripcion);
@@ -121,7 +120,6 @@ public class AddActivity extends AppCompatActivity {
                                     map.put("usuario", usuario);
                                     map.put("profilepic", profilepic);
                                     map.put("idpublicacion", idpublicacion);
-                                    map.put("likes", likes);
 
                                     dr.set(map);
 
@@ -178,31 +176,18 @@ public class AddActivity extends AppCompatActivity {
     }
 
     void imageChooser() {
-
-        // create an instance of the
-        // intent of the type image
         Intent i = new Intent();
         i.setType("image/*");
         i.setAction(Intent.ACTION_GET_CONTENT);
-
-        // pass the constant to compare it
-        // with the returned requestCode
         startActivityForResult(Intent.createChooser(i, "Select Picture"), SELECT_PICTURE);
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
         if (resultCode == RESULT_OK) {
-
-            // compare the resultCode with the
-            // SELECT_PICTURE constant
             if (requestCode == SELECT_PICTURE) {
-                // Get the url of the image from data
                 selectedImageUri = data.getData();
-
                 if (null != selectedImageUri) {
-                    // update the preview image in the layout
                     binding.AddImageViewImagen.setImageURI(selectedImageUri);
 
 
@@ -216,6 +201,7 @@ public class AddActivity extends AppCompatActivity {
         byte[] decodedString = Base64.decode(base64Image, Base64.DEFAULT);
         Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
         return decodedByte;
+
     }
     public static String bitmapToBase64(Bitmap bitmap) {
 

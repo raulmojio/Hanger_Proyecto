@@ -11,6 +11,9 @@ public class Clase {
     private String usuario;
     private String idpublicacion;
     private String likes;
+    private String profilepic;
+    private String descripcion;
+
 
     public Clase(){
 
@@ -57,6 +60,21 @@ public class Clase {
         this.titulo = titulo;
     }
 
+    public String getProfilepic() {
+        return profilepic;
+    }
+
+    public void setProfilepic(String profilepic) {
+        this.profilepic = profilepic;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
 
     public String getImagen() {
         return imagen;

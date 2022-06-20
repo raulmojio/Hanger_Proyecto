@@ -9,6 +9,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.text.Html;
 import android.util.Base64;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -34,10 +35,13 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.like.LikeButton;
 import com.like.OnLikeListener;
 
+import java.net.URL;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.prefs.Preferences;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class AmpliadoActivity extends AppCompatActivity {
 
@@ -59,10 +63,11 @@ public class AmpliadoActivity extends AppCompatActivity {
         getWindowManager().getDefaultDisplay().getMetrics(dm);
         int widht = dm.widthPixels;
         int height = dm.heightPixels;
-        getWindow().setLayout((int)(widht*.8),(int)(height*.6));
+        getWindow().setLayout((int) (widht * .8), (int) (height * .6));
 
 
     }
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -85,13 +90,15 @@ public class AmpliadoActivity extends AppCompatActivity {
         firestore.collection("Publicacion").document(id).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
-                if(documentSnapshot.exists()){
+                if (documentSnapshot.exists()) {
                     FirebaseUser user = auth.getCurrentUser();
                     String iduser = user.getUid();
 
                     dr = firestore.collection("Publicacion").document(id);
                     String descripcion = documentSnapshot.getString("descripcion");
-                    binding.Enlaces.setText(descripcion);
+                    binding.Enlaces.setText(Html.fromHtml(descripcion));
+
+
                 }
             }
         });
@@ -107,6 +114,7 @@ public class AmpliadoActivity extends AppCompatActivity {
         return decodedByte;
     }
 }
+
 
 
 

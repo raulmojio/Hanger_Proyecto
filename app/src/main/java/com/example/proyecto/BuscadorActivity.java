@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -26,6 +27,7 @@ public class BuscadorActivity extends AppCompatActivity{
     FirebaseFirestore firestore;
     Adaptador adapter;
     SearchView buscador;
+    Context context;
 
     private DatabaseReference databaseReference;
 
@@ -75,8 +77,9 @@ public class BuscadorActivity extends AppCompatActivity{
             binding.BuscadorActivityButtonNavegacion.setSelectedItemId(R.id.buscador);
             Query query = firestore.collection("Publicacion");
 
+            context = getApplicationContext();
             FirestoreRecyclerOptions<Clase> firestoreRecyclerOptions = new FirestoreRecyclerOptions.Builder<Clase>().setQuery(query, Clase.class).build();
-            adapter = new Adaptador(firestoreRecyclerOptions);
+            adapter = new Adaptador(firestoreRecyclerOptions, context);
             adapter.notifyDataSetChanged();
 
 
@@ -105,7 +108,7 @@ public class BuscadorActivity extends AppCompatActivity{
 
         FirestoreRecyclerOptions<Clase> firestoreRecyclerOptions = new FirestoreRecyclerOptions.Builder<Clase>().setQuery(FirebaseFirestore.getInstance().collection("Publicacion").orderBy("titulo").startAt(s).endAt(s+"\uf8ff"), Clase.class).build();
 
-        adapter=new Adaptador(firestoreRecyclerOptions);
+        adapter=new Adaptador(firestoreRecyclerOptions, context);
         adapter.startListening();
         adapter.setOnItemClickListener(new Adaptador.OnItemClickListener() {
             @Override
@@ -116,7 +119,7 @@ public class BuscadorActivity extends AppCompatActivity{
                 Bundle b = new Bundle();
                 b.putString("id", id);
                 intent.putExtras(b);
-                startActivity(intent);
+                //startActivity(intent);
             }
         });
         binding.BuscadorRecyclerviewLista.setAdapter(adapter);

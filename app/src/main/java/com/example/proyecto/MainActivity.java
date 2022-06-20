@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerViewreceta;
     private FirebaseAuth auth;
     Adaptador adapter;
+    Context context;
 
 
     private ActivityMainBinding binding;
@@ -34,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        context = getApplicationContext();
         setContentView(R.layout.activity_main);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         View v = binding.getRoot();
@@ -49,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
             Query query = firestore.collection("Publicacion");
 
             FirestoreRecyclerOptions<Clase> firestoreRecyclerOptions = new FirestoreRecyclerOptions.Builder<Clase>().setQuery(query, Clase.class).build();
-            adapter = new Adaptador(firestoreRecyclerOptions);
+            adapter = new Adaptador(firestoreRecyclerOptions, context);
             adapter.notifyDataSetChanged();
             adapter.setOnItemClickListener(new Adaptador.OnItemClickListener() {
                 @Override
@@ -60,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                     Bundle b = new Bundle();
                     b.putString("id", id);
                     intent.putExtras(b);
-                    startActivity(intent);
+                    //startActivity(intent);
                 }
             });
             binding.ActivityMainRecyclerviewLista.setAdapter(adapter);

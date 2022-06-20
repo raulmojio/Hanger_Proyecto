@@ -4,17 +4,15 @@
     android:layout_height="700dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/Main_Activity_Profile_Pic"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/defaultprofile"
-            app:civ_border_color="@color/rosapp"
-            app:civ_border_width="2dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp">
-        </de.hdodenhof.circleimageview.CircleImageView>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/Main_Activity_Profile_Pic"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/defaultprofile"
+        app:civ_border_color="@color/rosapp"
+        app:civ_border_width="2dp"></de.hdodenhof.circleimageview.CircleImageView>
 
     <TextView
         android:id="@+id/Main_Activity_Usuario"
@@ -42,40 +40,36 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/Main_Activity_Imagen"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="23dp"
+        android:layout_marginTop="17dp"
         android:text="Titulo"
-        android:textSize="20dp"></TextView>
+        android:textSize="20dp"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:id="@+id/textviewenlaces"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/azullink"
+        android:text="Ver en el sitio web"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/Main_Activity_Titulo"
+        ></TextView>
 
 
     <com.like.LikeButton
         android:id="@+id/btnFavoritos_MA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_marginLeft="250dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginTop="0dp"
-        android:layout_below="@id/Main_Activity_Imagen"
-        android:layout_toRightOf="@id/Main_Activity_Titulo"
-        android:clickable="true"
         app:anim_scale_factor="2"
         app:circle_end_color="@color/rosapp"
         app:circle_start_color="@color/rosapp"
-        app:icon_size="40dp"
+        app:icon_size="30dp"
         app:icon_type="heart"
         app:like_drawable="@drawable/ic_fav_liked"
-        app:unlike_drawable="@drawable/ic_fav" />
-
-    <TextView
-        android:id="@+id/ActivityMain_Likes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        app:unlike_drawable="@drawable/ic_fav"
         android:layout_below="@id/Main_Activity_Imagen"
-        android:textSize="20dp"
-        android:layout_marginTop="23dp"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="15dp">
-    </TextView>
+        android:layout_alignParentEnd="true"/>
 
 
     <TextView
@@ -90,7 +84,12 @@
         android:layout_marginRight="15dp">
     </TextView>
 
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        android:layout_below="@id/Main_Activity_Titulo"
+        android:layout_marginTop="30dp" />
 
 
 
