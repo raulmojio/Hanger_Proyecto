@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="700dp"
+    android:layout_height="610dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -28,7 +28,7 @@
     <ImageView
         android:id="@+id/Main_Activity_Imagen"
         android:layout_width="match_parent"
-        android:layout_height="550dp"
+        android:layout_height="450dp"
         android:layout_below="@id/Main_Activity_Profile_Pic"
         android:layout_marginTop="8dp"
         android:scaleType="centerCrop"
@@ -89,7 +89,7 @@
         android:layout_height="1dp"
         android:background="?android:attr/listDivider"
         android:layout_below="@id/Main_Activity_Titulo"
-        android:layout_marginTop="30dp" />
+        android:layout_marginTop="40dp" />
 
 
 

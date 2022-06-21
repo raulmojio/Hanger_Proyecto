@@ -5,6 +5,7 @@
         <item name="colorPrimary">@color/rosapp</item>
         <item name="colorPrimaryVariant">@color/rosapp</item>
         <item name="colorOnPrimary">@color/gris</item>
+        <item name="android:fontFamily">@font/barlow</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/gris</item>
         <item name="colorSecondaryVariant">@color/white</item>
